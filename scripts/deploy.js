@@ -3,10 +3,8 @@ const { ethers } = require("hardhat");
 
 async function main() {
 
-  // const Greeter = await hre.ethers.getContractFactory("Greeter");
   const tweetdApp = await ethers.getContractFactory("tweetdApp");
 
-  // const greeter = await Greeter.deploy("Hello, Hardhat!");
   const deployTheContract = await tweetdApp.deploy();
 
   await deployTheContract.deployed();
